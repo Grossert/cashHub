@@ -4,131 +4,558 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo de Navbar com Bootstrap</title>
-
-    <!-- Arquivos CSS do Bootstrap -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Arquivos JavaScript do Bootstrap (opcional, dependendo do uso) -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Início</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">Seu Logo Aqui</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">ConFinance</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Início <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Faturamento</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Gastos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cadastro.html">Cadastrar</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                </form>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="receita.html">Receita</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="despesa.html">Despesa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="investimento.html">Investimento</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Seu conteúdo aqui -->
-    <div class="container mt-4">
+    <main class=" container table-responsive main-container mt-5">
+
+        <table class="tb-geral table table-striped">
+            <thead>
+                <tr class="text-center table-dark">
+                    <th colspan="12">ADICIONE O SALDO INICIAL DE CADA MÊS</th>
+                </tr>
+                <tr class="text-center">
+                    <th scope="col" id="JAN">JAN</th>
+                    <th scope="col" id="FEV">FEV</th>
+                    <th scope="col" id="MAR">MAR</th>
+                    <th scope="col" id="ABR">ABR</th>
+                    <th scope="col" id="MAI">MAI</th>
+                    <th scope="col" id="JUN">JUN</th>
+                    <th scope="col" id="JUL">JUL</th>
+                    <th scope="col" id="AGO">AGO</th>
+                    <th scope="col" id="SET">SET</th>
+                    <th scope="col" id="OUT">OUT</th>
+                    <th scope="col" id="NOV">NOV</th>
+                    <th scope="col" id="DEC">DEC</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="text-center">
+                    <td class="p-3" data-bs-toggle="offcanvas" data-bs-target="#cadastroJAN"
+                        onclick="editaCelulaGeral(event)"></td>
+                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroFEV" onclick="editaCelulaGeral(event)"></td>
+                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroMAR" onclick="editaCelulaGeral(event)"></td>
+                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroABR" onclick="editaCelulaGeral(event)"></td>
+                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroMAI" onclick="editaCelulaGeral(event)"></td>
+                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroJUN" onclick="editaCelulaGeral(event)"></td>
+                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroJUL" onclick="editaCelulaGeral(event)"></td>
+                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroAGO" onclick="editaCelulaGeral(event)"></td>
+                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroSET" onclick="editaCelulaGeral(event)"></td>
+                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroOUT" onclick="editaCelulaGeral(event)"></td>
+                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroNOV" onclick="editaCelulaGeral(event)"></td>
+                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroDEC" onclick="editaCelulaGeral(event)"></td>
+                <tr>
+            </tbody>
+        </table>
+
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr class="text-center table-dark">
+                    <th colspan="13">CALCULO ANUAL</th>
+                </tr>
+                <tr class="text-center">
+                    <th class="p-3" scope="col"></th>
+                    <th scope="col">JAN</th>
+                    <th scope="col">FEV</th>
+                    <th scope="col">MAR</th>
+                    <th scope="col">ABR</th>
+                    <th scope="col">MAI</th>
+                    <th scope="col">JUN</th>
+                    <th scope="col">JUL</th>
+                    <th scope="col">AGO</th>
+                    <th scope="col">SET</th>
+                    <th scope="col">OUT</th>
+                    <th scope="col">NOV</th>
+                    <th scope="col">DEC</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="text-center">
+                    <td>Receita</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                <tr>
+                <tr class="text-center">
+                    <td>Despesa</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                <tr>
+                <tr class="text-center table-group-divider">
+                    <td>Total</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                <tr>
+                <tr class="text-center table-group-divider">
+                    <td>Investimentos</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                <tr>
+            </tbody>
+        </table>
+
+        <hr>
+        <h2 class="text-center">RESUMO ANUAL</h2>
         <div class="row">
-            <div class="col-12">
-                <h1>Conteúdo da Página</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta praesentium corrupti corporis
-                    voluptate, atque amet molestias natus cum reiciendis magni fugit placeat ad minima, necessitatibus
-                    est facilis vero quidem blanditiis.</p>
 
-                <table class="table">
+            <div class="col-md-4">
+                <table class="table table-striped table-hover">
                     <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nome do produto gasto</th>
-                            <th scope="col">Despesas</th>
-                            <th scope="col">Dia da compra</th>
+                        <tr class="text-center table-dark">
+                            <th colspan="2" scope="col">RECEITAS</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Posto Ipiranga</td>
-                            <td>R$100,00</td>
-                            <td>27/05/2024</td>
-                        </tr>
+                            <td>Proventos (FII's)</td>
+                            <td>98789</td>
                         <tr>
-                            <th scope="row">2</th>
-                            <td>Coca-Cola 2L</td>
-                            <td>R$10,00</td>
-                            <td>10/03/2024</td>
-                        </tr>
                         <tr>
-                            <th scope="row">3</th>
-                            <td>Universidade SENAI</td>
-                            <td>R$650,00</td>
-                            <td>16/02/2024</td>
-                        </tr>
+                            <td>Proventos (Ações)</td>
+                            <td>789789</td>
                         <tr>
-                            <th scope="row">4</th>
-                            <td>Multa de Trânsito</td>
-                            <td>R$263,17</td>
-                            <td>14/07/2024</td>
-                        </tr>
                         <tr>
-                            <th scope="row">5</th>
-                            <td>Hospital Santa Isabel</td>
-                            <td>R$350,00</td>
-                            <td>12/06/2024</td>
-                        </tr>
+                            <td>Proventos (BDR's)</td>
+                            <td>978789</td>
+                        <tr>
+                        <tr>
+                            <td>Proventos Extra</td>
+                            <td>789978</td>
+                        <tr>
                     </tbody>
                 </table>
+            </div>
 
-                <!-- Formulário de cadastro de despesas -->
-                <h2 class="mt-4">Adicionar Nova Despesa</h2>
-                <form id="form-despesas">
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="nome-produto">Nome do produto:</label>
-                            <input type="text" class="form-control" id="nome-produto" name="nome-produto" required>
-                        </div>
-                        <div class="form-group col-md-3">
-                            <label for="valor-despesa">Valor (R$):</label>
-                            <input type="number" step="0.01" class="form-control" id="valor-despesa" name="valor-despesa" required>
-                        </div>
-                        <div class="form-group col-md-3">
-                            <label for="data-compra">Dia da compra:</label>
-                            <input type="date" class="form-control" id="data-compra" name="data-compra" required>
-                        </div>
+            <div class="col-md-4">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr class="text-center table-dark">
+                            <th colspan="2" scope="col">DESPESAS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fixas</td>
+                            <td>789897</td>
+                        <tr>
+                        <tr>
+                            <td>Variaveis</td>
+                            <td>78998</td>
+                        <tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-4">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr class="text-center table-dark">
+                            <th colspan="2" scope="col">Investimentos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>FII's</td>
+                            <td>7899787</td>
+                        <tr>
+                        <tr>
+                            <td>Ações</td>
+                            <td>789798</td>
+                        <tr>
+                        <tr>
+                            <td>BDR's</td>
+                            <td>789789</td>
+                        <tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <div id="offCanvasContainer">
+
+        <div id="cadastroJAN" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
+            tabindex="-1">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form class="row">
+                    <div class="col-7">
+                        <input type="date" class="form-control" id="dataCadastro">
                     </div>
-                    <button type="submit" class="btn btn-primary">Adicionar</button>
+                    <div class="col-5">
+                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
+                    </div>
+                    <section class="row" id="sectionCadastroGeralJAN">
+                    </section>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="offcanvas"
+                            onclick="addValorCelula()">Salvar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
+                    </div>
                 </form>
             </div>
         </div>
+
+        <div id="cadastroFEV" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
+            tabindex="-1">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form class="row">
+                    <div class="col-7">
+                        <input type="date" class="form-control" id="dataCadastro">
+                    </div>
+                    <div class="col-5">
+                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
+                    </div>
+                    <section class="row" id="sectionCadastroGeralFEV">
+                    </section>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="offcanvas"
+                            onclick="addValorCelula()">Salvar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="cadastroMAR" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
+            tabindex="-1">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form class="row">
+                    <div class="col-7">
+                        <input type="date" class="form-control" id="dataCadastro">
+                    </div>
+                    <div class="col-5">
+                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
+                    </div>
+                    <section class="row" id="sectionCadastroGeralMAR">
+                    </section>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="offcanvas"
+                            onclick="addValorCelula()">Salvar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="cadastroABR" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
+            tabindex="-1">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form class="row">
+                    <div class="col-7">
+                        <input type="date" class="form-control" id="dataCadastro">
+                    </div>
+                    <div class="col-5">
+                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
+                    </div>
+                    <section class="row" id="sectionCadastroGeralABR">
+                    </section>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="offcanvas"
+                            onclick="addValorCelula()">Salvar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="cadastroMAI" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
+            tabindex="-1">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form class="row">
+                    <div class="col-7">
+                        <input type="date" class="form-control" id="dataCadastro">
+                    </div>
+                    <div class="col-5">
+                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
+                    </div>
+                    <section class="row" id="sectionCadastroGeralMAI">
+                    </section>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="offcanvas"
+                            onclick="addValorCelula()">Salvar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="cadastroJUN" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
+            tabindex="-1">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form class="row">
+                    <div class="col-7">
+                        <input type="date" class="form-control" id="dataCadastro">
+                    </div>
+                    <div class="col-5">
+                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
+                    </div>
+                    <section class="row" id="sectionCadastroGeralJUN">
+                    </section>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="offcanvas"
+                            onclick="addValorCelula()">Salvar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="cadastroJUL" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
+            tabindex="-1">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form class="row">
+                    <div class="col-7">
+                        <input type="date" class="form-control" id="dataCadastro">
+                    </div>
+                    <div class="col-5">
+                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
+                    </div>
+                    <section class="row" id="sectionCadastroGeralJUL">
+                    </section>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="offcanvas"
+                            onclick="addValorCelula()">Salvar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="cadastroAGO" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
+            tabindex="-1">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form class="row">
+                    <div class="col-7">
+                        <input type="date" class="form-control" id="dataCadastro">
+                    </div>
+                    <div class="col-5">
+                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
+                    </div>
+                    <section class="row" id="sectionCadastroGeralAGO">
+                    </section>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="offcanvas"
+                            onclick="addValorCelula()">Salvar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="cadastroSET" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
+            tabindex="-1">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form class="row">
+                    <div class="col-7">
+                        <input type="date" class="form-control" id="dataCadastro">
+                    </div>
+                    <div class="col-5">
+                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
+                    </div>
+                    <section class="row" id="sectionCadastroGeralSET">
+                    </section>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="offcanvas"
+                            onclick="addValorCelula()">Salvar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="cadastroOUT" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
+            tabindex="-1">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form class="row">
+                    <div class="col-7">
+                        <input type="date" class="form-control" id="dataCadastro">
+                    </div>
+                    <div class="col-5">
+                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
+                    </div>
+                    <section class="row" id="sectionCadastroGeralOUT">
+                    </section>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="offcanvas"
+                            onclick="addValorCelula()">Salvar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="cadastroNOV" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
+            tabindex="-1">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form class="row">
+                    <div class="col-7">
+                        <input type="date" class="form-control" id="dataCadastro">
+                    </div>
+                    <div class="col-5">
+                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
+                    </div>
+                    <section class="row" id="sectionCadastroGeralNOV">
+                    </section>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="offcanvas"
+                            onclick="addValorCelula()">Salvar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="cadastroDEC" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
+            tabindex="-1">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form class="row">
+                    <div class="col-7">
+                        <input type="date" class="form-control" id="dataCadastro">
+                    </div>
+                    <div class="col-5">
+                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
+                    </div>
+                    <section class="row" id="sectionCadastroGeralDEC">
+                    </section>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="offcanvas"
+                            onclick="addValorCelula()">Salvar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
     </div>
+
 </body>
-    <script src="index.js"></script>
-    <!-- Arquivos JavaScript necessários do Bootstrap (opcional, dependendo do uso) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
 </html>
