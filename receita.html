@@ -44,9 +44,53 @@
         </nav>
     </header>
 
-    <main>
-        <p>RECEITA</p>
+    <main class=" container table-responsive main-container mt-5">
+        <table class="tb-geral table table-striped">
+            <thead>
+                <tr class="text-center table-dark">
+                    <th colspan="14">RECEITA</th>
+                </tr>
+                <tr class="text-center">
+                    <th scope="col"></th>
+                    <th scope="col" id="JANR">JAN</th>
+                    <th scope="col" id="FEVR">FEV</th>
+                    <th scope="col" id="MARR">MAR</th>
+                    <th scope="col" id="ABRR">ABR</th>
+                    <th scope="col" id="MAIR">MAI</th>
+                    <th scope="col" id="JUNR">JUN</th>
+                    <th scope="col" id="JULR">JUL</th>
+                    <th scope="col" id="AGOR">AGO</th>
+                    <th scope="col" id="SETR">SET</th>
+                    <th scope="col" id="OUTR">OUT</th>
+                    <th scope="col" id="NOVR">NOV</th>
+                    <th scope="col" id="DECR">DEC</th>
+                    <th scope="col">TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="text-center">
+                    <td onclick="editaCelulaReceita(event)" class="menuLateralTable p-3"></td>
+                    <td onclick="editaCelulaReceita(event)" data-bs-toggle="offcanvas"
+                        data-bs-target="#cadastroReceitaJAN"></td>
+                    <td onclick="editaCelulaReceita(event)"></td>
+                    <td onclick="editaCelulaReceita(event)"></td>
+                    <td onclick="editaCelulaReceita(event)"></td>
+                    <td onclick="editaCelulaReceita(event)"></td>
+                    <td onclick="editaCelulaReceita(event)"></td>
+                    <td onclick="editaCelulaReceita(event)"></td>
+                    <td onclick="editaCelulaReceita(event)"></td>
+                    <td onclick="editaCelulaReceita(event)"></td>
+                    <td onclick="editaCelulaReceita(event)"></td>
+                    <td onclick="editaCelulaReceita(event)"></td>
+                    <td onclick="editaCelulaReceita(event)"></td>
+                    <td onclick="editaCelulaReceita(event)"></td>
+                <tr>
+            </tbody>
+        </table>
     </main>
+
+    <div id="offcanvasContainerReceita">
+    </div>
 
 </body>
 <script src="main.js"></script>

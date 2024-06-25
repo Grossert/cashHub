@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="bg-body-secondary">
     <header>
         <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
             <div class="container-fluid">
@@ -44,7 +44,7 @@
         </nav>
     </header>
 
-    <main class=" container table-responsive main-container mt-5" >
+    <main class=" container table-responsive main-container mt-5">
 
         <table class="tb-geral table table-striped">
             <thead>
@@ -69,19 +69,18 @@
             </thead>
             <tbody>
                 <tr class="text-center">
-                    <td class="p-3" data-bs-toggle="offcanvas" data-bs-target="#cadastroJAN"
-                        onclick="editaCelulaGeral(event)"></td>
-                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroFEV" onclick="editaCelulaGeral(event)"></td>
-                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroMAR" onclick="editaCelulaGeral(event)"></td>
-                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroABR" onclick="editaCelulaGeral(event)"></td>
-                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroMAI" onclick="editaCelulaGeral(event)"></td>
-                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroJUN" onclick="editaCelulaGeral(event)"></td>
-                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroJUL" onclick="editaCelulaGeral(event)"></td>
-                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroAGO" onclick="editaCelulaGeral(event)"></td>
-                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroSET" onclick="editaCelulaGeral(event)"></td>
-                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroOUT" onclick="editaCelulaGeral(event)"></td>
-                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroNOV" onclick="editaCelulaGeral(event)"></td>
-                    <td data-bs-toggle="offcanvas" data-bs-target="#cadastroDEC" onclick="editaCelulaGeral(event)"></td>
+                    <td onclick="editaCelulaGeral(event)" class="p-3"></td>
+                    <td onclick="editaCelulaGeral(event)"></td>
+                    <td onclick="editaCelulaGeral(event)"></td>
+                    <td onclick="editaCelulaGeral(event)"></td>
+                    <td onclick="editaCelulaGeral(event)"></td>
+                    <td onclick="editaCelulaGeral(event)"></td>
+                    <td onclick="editaCelulaGeral(event)"></td>
+                    <td onclick="editaCelulaGeral(event)"></td>
+                    <td onclick="editaCelulaGeral(event)"></td>
+                    <td onclick="editaCelulaGeral(event)"></td>
+                    <td onclick="editaCelulaGeral(event)"></td>
+                    <td onclick="editaCelulaGeral(event)"></td>
                 <tr>
             </tbody>
         </table>
@@ -174,7 +173,6 @@
         <hr>
         <h2 class="text-center">RESUMO ANUAL</h2>
         <div class="row">
-
             <div class="col-md-4">
                 <table class="table table-striped table-hover">
                     <thead>
@@ -243,315 +241,21 @@
                             <td>BDR's</td>
                             <td>789789</td>
                         <tr>
+                        <tr>
+                            <td>Poupança</td>
+                            <td>789789</td>
+                        <tr>
+                        <tr>
+                            <td>Tesouro Selic</td>
+                            <td>789789</td>
+                        <tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </main>
 
-    <div id="offCanvasContainer">
-
-        <div id="cadastroJAN" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
-            tabindex="-1">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-            </div>
-            <div class="offcanvas-body">
-                <form class="row">
-                    <div class="col-7">
-                        <input type="date" class="form-control" id="dataCadastro">
-                    </div>
-                    <div class="col-5">
-                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
-                    </div>
-                    <section class="row" id="sectionCadastroGeralJAN">
-                    </section>
-                    <div class="col-12">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas"
-                            onclick="addValorCelula()">Salvar</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div id="cadastroFEV" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
-            tabindex="-1">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-            </div>
-            <div class="offcanvas-body">
-                <form class="row">
-                    <div class="col-7">
-                        <input type="date" class="form-control" id="dataCadastro">
-                    </div>
-                    <div class="col-5">
-                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
-                    </div>
-                    <section class="row" id="sectionCadastroGeralFEV">
-                    </section>
-                    <div class="col-12">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas"
-                            onclick="addValorCelula()">Salvar</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div id="cadastroMAR" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
-            tabindex="-1">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-            </div>
-            <div class="offcanvas-body">
-                <form class="row">
-                    <div class="col-7">
-                        <input type="date" class="form-control" id="dataCadastro">
-                    </div>
-                    <div class="col-5">
-                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
-                    </div>
-                    <section class="row" id="sectionCadastroGeralMAR">
-                    </section>
-                    <div class="col-12">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas"
-                            onclick="addValorCelula()">Salvar</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div id="cadastroABR" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
-            tabindex="-1">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-            </div>
-            <div class="offcanvas-body">
-                <form class="row">
-                    <div class="col-7">
-                        <input type="date" class="form-control" id="dataCadastro">
-                    </div>
-                    <div class="col-5">
-                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
-                    </div>
-                    <section class="row" id="sectionCadastroGeralABR">
-                    </section>
-                    <div class="col-12">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas"
-                            onclick="addValorCelula()">Salvar</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div id="cadastroMAI" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
-            tabindex="-1">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-            </div>
-            <div class="offcanvas-body">
-                <form class="row">
-                    <div class="col-7">
-                        <input type="date" class="form-control" id="dataCadastro">
-                    </div>
-                    <div class="col-5">
-                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
-                    </div>
-                    <section class="row" id="sectionCadastroGeralMAI">
-                    </section>
-                    <div class="col-12">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas"
-                            onclick="addValorCelula()">Salvar</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div id="cadastroJUN" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
-            tabindex="-1">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-            </div>
-            <div class="offcanvas-body">
-                <form class="row">
-                    <div class="col-7">
-                        <input type="date" class="form-control" id="dataCadastro">
-                    </div>
-                    <div class="col-5">
-                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
-                    </div>
-                    <section class="row" id="sectionCadastroGeralJUN">
-                    </section>
-                    <div class="col-12">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas"
-                            onclick="addValorCelula()">Salvar</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div id="cadastroJUL" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
-            tabindex="-1">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-            </div>
-            <div class="offcanvas-body">
-                <form class="row">
-                    <div class="col-7">
-                        <input type="date" class="form-control" id="dataCadastro">
-                    </div>
-                    <div class="col-5">
-                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
-                    </div>
-                    <section class="row" id="sectionCadastroGeralJUL">
-                    </section>
-                    <div class="col-12">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas"
-                            onclick="addValorCelula()">Salvar</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div id="cadastroAGO" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
-            tabindex="-1">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-            </div>
-            <div class="offcanvas-body">
-                <form class="row">
-                    <div class="col-7">
-                        <input type="date" class="form-control" id="dataCadastro">
-                    </div>
-                    <div class="col-5">
-                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
-                    </div>
-                    <section class="row" id="sectionCadastroGeralAGO">
-                    </section>
-                    <div class="col-12">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas"
-                            onclick="addValorCelula()">Salvar</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div id="cadastroSET" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
-            tabindex="-1">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-            </div>
-            <div class="offcanvas-body">
-                <form class="row">
-                    <div class="col-7">
-                        <input type="date" class="form-control" id="dataCadastro">
-                    </div>
-                    <div class="col-5">
-                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
-                    </div>
-                    <section class="row" id="sectionCadastroGeralSET">
-                    </section>
-                    <div class="col-12">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas"
-                            onclick="addValorCelula()">Salvar</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div id="cadastroOUT" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
-            tabindex="-1">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-            </div>
-            <div class="offcanvas-body">
-                <form class="row">
-                    <div class="col-7">
-                        <input type="date" class="form-control" id="dataCadastro">
-                    </div>
-                    <div class="col-5">
-                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
-                    </div>
-                    <section class="row" id="sectionCadastroGeralOUT">
-                    </section>
-                    <div class="col-12">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas"
-                            onclick="addValorCelula()">Salvar</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div id="cadastroNOV" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
-            tabindex="-1">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-            </div>
-            <div class="offcanvas-body">
-                <form class="row">
-                    <div class="col-7">
-                        <input type="date" class="form-control" id="dataCadastro">
-                    </div>
-                    <div class="col-5">
-                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
-                    </div>
-                    <section class="row" id="sectionCadastroGeralNOV">
-                    </section>
-                    <div class="col-12">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas"
-                            onclick="addValorCelula()">Salvar</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div id="cadastroDEC" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false"
-            tabindex="-1">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-            </div>
-            <div class="offcanvas-body">
-                <form class="row">
-                    <div class="col-7">
-                        <input type="date" class="form-control" id="dataCadastro">
-                    </div>
-                    <div class="col-5">
-                        <button type="button" class="btn btn-primary" onclick="addCadastroGeral()">Add Local</button>
-                    </div>
-                    <section class="row" id="sectionCadastroGeralDEC">
-                    </section>
-                    <div class="col-12">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas"
-                            onclick="addValorCelula()">Salvar</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Cancelar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-
+    <div id="offCanvasContainerGeral">
     </div>
 </body>
 <script src="main.js"></script>

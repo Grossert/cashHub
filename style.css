@@ -1,3 +1,3 @@
-.tb-geral td:hover {
+.tb-geral td:not(.menuLateralTable):hover  {
     background-color: rgb(218, 250, 218);
 }
