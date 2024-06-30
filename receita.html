@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="bg-body-secondary">
     <header>
         <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
             <div class="container-fluid">
@@ -48,7 +48,7 @@
         <table class="tb-geral table table-striped">
             <thead>
                 <tr class="text-center table-dark">
-                    <th colspan="14" onclick="adicionaLinhaReceita()">+ RECEITA</th>
+                    <th colspan="14" onclick="addLinha(event)">+ RECEITA</th>
                 </tr>
                 <tr class="text-center">
                     <th scope="col"></th>
@@ -64,10 +64,9 @@
                     <th scope="col">OUT</th>
                     <th scope="col">NOV</th>
                     <th scope="col">DEC</th>
-                    <th scope="col">TOTAL</th>
                 </tr>
             </thead>
-            <tbody id="linhasTabelaReceita">
+            <tbody id="linhaReceita">
             </tbody>
         </table>
     </main>
