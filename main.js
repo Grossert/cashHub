@@ -57,7 +57,7 @@ function canvasInicio(id) {
             `
         <div id="cadastro${id}" class="offcanvas offcanvas-start p-3" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">CADASTRO</h5>
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">SALDO DO MÊS</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
